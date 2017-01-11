@@ -1,0 +1,28 @@
+<resources>
+    <string name="app_name">NutriHelp</string>
+    <string name="S0">0.0</string>
+    <!-- Nombre de entradas -->
+    <string name="peso">Peso(Kg)</string>
+    <string name="talla">Talla(cm)</string>
+    <string name="brazore">Brazo Relajado</string>
+    <string name="brazofle">Brazo Flexionado</string>
+    <string name="cintura">Cintura(min)</string>
+    <string name="caderaMax">Cadera(max)</string>
+    <string name="pantorrillaMax">Pantorrilla(max)</string>
+    <string name="triceps">Tríceps</string>
+    <string name="subescapular">Subescapular</string>
+    <string name="biceps">Bíceps</string>
+    <string name="crestalliaca">Crestallíaca</string>
+    <string name="supraespinal">Supraespinal</string>
+    <string name="abdominal">Abdominal</string>
+    <string name="muslofron">MusloFrontal</string>
+    <string name="pantorrilla">Pantorrila</string>
+    <string name="humeral">Humeral</string>
+    <string name="femoral">Femoral</string>
+    <string name="dm">DM</string>
+    <!-- Nombre de salidas -->
+    <string name="sum6pli">Suma. 6 pliegues</string>
+    <string name="mgrasacarter">%M. Grasa(Carter)</string>
+    <string name="mresidual">%Masa residual</string>
+
+</resources>
