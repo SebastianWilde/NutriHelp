@@ -11,11 +11,6 @@
     android:orientation="vertical"
     tools:context="com.app.wilde.sebastian.nutrihelp.MainActivity">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Ingresa los datos amigo nutricionista:" />
-
     <ScrollView
         android:layout_width="wrap_content"
         android:layout_height="261dp">
@@ -349,6 +344,11 @@
         </LinearLayout>
 
     </ScrollView>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Ingresa los datos amigo nutricionista:" />
 
     <RadioGroup
         android:layout_width="match_parent"

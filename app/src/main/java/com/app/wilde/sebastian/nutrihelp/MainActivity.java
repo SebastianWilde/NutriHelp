@@ -11,6 +11,7 @@ import android.widget.RadioButton;
 import android.widget.TextView;
 
 import static com.app.wilde.sebastian.nutrihelp.R.id.calcular;
+import static com.app.wilde.sebastian.nutrihelp.R.id.mgrasakg;
 
 public class MainActivity extends AppCompatActivity {
     //Entradas
@@ -21,9 +22,10 @@ public class MainActivity extends AppCompatActivity {
     //Entradas tipo double
     double pesodb , talladb,brazoRelajadodb,brazoFlexionadodb,cinturadb,
             caderasdb,pantorrilaMaxdb,tricepsdb,subescapulardb,bicepsdb,crestalliacadb,
-            supraespinaldb,abdominaldb,musloFrontaldb,pantorriladb,humeraldb,femoraldb,dmldb;
+            supraespinaldb,abdominaldb,musloFrontaldb,pantorriladb,humeraldb,femoraldb,dmdb;
     //Salidas
-    double  sum6plidb, mgrasacarterdb,mresidualdb;
+    double  sum6plidb, mgrasacarterdb,mresidualdb,mgrasakgdb,mmuscularkgdb,mmusculardb,mresidualkgdb,
+    moseakgdb,moseadb;
     /////
     Button btncalcular;
     RadioButton rbHombre,rbMujer;
@@ -84,21 +86,38 @@ public class MainActivity extends AppCompatActivity {
                 pantorriladb=Double.parseDouble(pantorrila.getText().toString());
                 humeraldb=Double.parseDouble(humeral.getText().toString());
                 femoraldb=Double.parseDouble(femoral.getText().toString());
-                dmldb=Double.parseDouble(dm.getText().toString());
+                dmdb=Double.parseDouble(dm.getText().toString());
                 //
-                sum6plidb=mgrasacarterdb=mresidualdb=0;
+                sum6plidb=mgrasacarterdb=mresidualdb=mgrasakgdb=mmuscularkgdb=mmusculardb=mresidualkgdb=
+                        moseakgdb=moseadb=0;
                 //Operaciones
                 sum6plidb = tricepsdb + subescapulardb + supraespinaldb + abdominaldb + musloFrontaldb + pantorriladb;
-                mgrasacarterdb=(0.1051*sum6plidb)+2.585;
                 if (rbHombre.isChecked()==true) {
                     //System.out.println(sum6plidb);
                     mgrasacarterdb=(0.1051*sum6plidb)+2.585;
-                    mresidualdb=0.241*pesodb;
+                    mresidualkgdb=0.241*pesodb;
                 }
                 else
                 {
                     mgrasacarterdb=(0.1548*sum6plidb)+3.58;
+                    mresidualkgdb=0.209*pesodb;
                 }
+                mresidualdb=(mresidualkgdb*100)/pesodb;
+                mgrasakgdb=(pesodb*mgrasacarterdb)/100;
+                moseakgdb=3.02*Math.pow((Math.pow(talladb/100,2)*(dmdb/100)*(femoraldb/100)*400),0.712);
+                mmuscularkgdb = pesodb - (mgrasakgdb + mresidualkgdb + moseakgdb);
+                mmusculardb = (mmuscularkgdb * 100)/pesodb;
+                moseadb = (moseakgdb * 100)/pesodb;
+                ///Redondeando resultados a dos decimales
+                sum6plidb=Math.round(sum6plidb * 100.0) / 100.0;
+                mgrasacarterdb= Math.round(mgrasacarterdb * 100.0) / 100.0;
+                mresidualdb=Math.round(mresidualdb * 100.0) / 100.0;
+                mgrasakgdb=Math.round(mgrasakgdb * 100.0) / 100.0;
+                mmuscularkgdb=Math.round(mmuscularkgdb * 100.0) / 100.0;
+                mmusculardb=Math.round(mmusculardb * 100.0) / 100.0;
+                mresidualkgdb=Math.round(mresidualkgdb * 100.0) / 100.0;
+                moseakgdb=Math.round(moseakgdb * 100.0) / 100.0;
+                moseadb=Math.round(moseadb * 100.0) / 100.0;
                 //Creación de intent
                 Intent intent = new Intent(MainActivity.this,Resultados.class);
                 //Para pasar informacion
@@ -114,6 +133,12 @@ public class MainActivity extends AppCompatActivity {
                 intent.putExtra("sum6pli",Double.toString(sum6plidb));
                 intent.putExtra("mgrasacarter",Double.toString(mgrasacarterdb));
                 intent.putExtra("mresidual",Double.toString(mresidualdb));
+                intent.putExtra("mgrasakg",Double.toString(mgrasakgdb));
+                intent.putExtra("mmuscularkg",Double.toString(mmuscularkgdb));
+                intent.putExtra("mmuscular",Double.toString(mmusculardb));
+                intent.putExtra("mresidualkg",Double.toString(mresidualkgdb));
+                intent.putExtra("moseakg",Double.toString(moseakgdb));
+                intent.putExtra("mosea",Double.toString(moseadb));
                 startActivity(intent);
             }
         });

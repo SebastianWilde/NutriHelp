@@ -22,7 +22,14 @@
     <string name="dm">DM</string>
     <!-- Nombre de salidas -->
     <string name="sum6pli">Suma. 6 pliegues</string>
-    <string name="mgrasacarter">%M. Grasa(Carter)</string>
+    <string name="mgrasacarter">%M. grasa(Carter)</string>
     <string name="mresidual">%Masa residual</string>
+    <string name="mgrasakg">Masa grasa(kg)</string>
+    <string name="mmuscular">%M. muscular</string>
+    <string name="mresidualkg">Masa residual(kg)</string>
+    <string name="moseakg">Masa ósea(kg)</string>
+    <string name="mosea">%M. Ósea</string>
+    <string name="mmuscularkg">Masa muscular(kg)</string>
+
 
 </resources>
