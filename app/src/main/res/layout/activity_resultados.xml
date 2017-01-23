@@ -21,14 +21,14 @@
         android:orientation="horizontal">
         <TextView
             android:text="@string/sum6pli"
-            android:layout_width="wrap_content"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:id="@+id/textView21"
             android:layout_weight="1" />
 
         <TextView
             android:text=""
-            android:layout_width="wrap_content"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:id="@+id/sum6pli"
             android:layout_weight="1"
@@ -40,14 +40,14 @@
         android:orientation="horizontal">
         <TextView
             android:text="@string/mgrasacarter"
-            android:layout_width="wrap_content"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:id="@+id/textView22"
             android:layout_weight="1" />
 
         <TextView
             android:text=""
-            android:layout_width="wrap_content"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:id="@+id/mgrasacarter"
             android:layout_weight="1"
@@ -59,14 +59,14 @@
         android:orientation="horizontal">
         <TextView
             android:text="@string/mresidual"
-            android:layout_width="wrap_content"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:id="@+id/textView23"
             android:layout_weight="1" />
 
         <TextView
             android:text=""
-            android:layout_width="wrap_content"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:id="@+id/mresidual"
             android:layout_weight="1"
@@ -78,14 +78,14 @@
         android:orientation="horizontal">
         <TextView
             android:text="@string/mgrasakg"
-            android:layout_width="wrap_content"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:id="@+id/textView21"
             android:layout_weight="1" />
 
         <TextView
             android:text=""
-            android:layout_width="wrap_content"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:id="@+id/mgrasakg"
             android:layout_weight="1"
@@ -97,18 +97,18 @@
         android:orientation="horizontal">
         <TextView
             android:text="@string/mmuscularkg"
-            android:layout_width="wrap_content"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:id="@+id/textView22"
-            android:layout_weight="1"
-            android:gravity="center"/>
+            android:layout_weight="1" />
 
         <TextView
             android:text=""
-            android:layout_width="wrap_content"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:id="@+id/mmuscularkg"
-            android:layout_weight="1" />
+            android:layout_weight="1"
+            android:gravity="center"/>
     </LinearLayout>
     <LinearLayout
         android:layout_width="match_parent"
@@ -116,14 +116,14 @@
         android:orientation="horizontal">
         <TextView
             android:text="@string/mmuscular"
-            android:layout_width="wrap_content"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:id="@+id/textView23"
             android:layout_weight="1" />
 
         <TextView
             android:text=""
-            android:layout_width="wrap_content"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:id="@+id/mmuscular"
             android:layout_weight="1"
@@ -135,14 +135,14 @@
         android:orientation="horizontal">
         <TextView
             android:text="@string/mresidualkg"
-            android:layout_width="wrap_content"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:id="@+id/textView21"
             android:layout_weight="1" />
 
         <TextView
             android:text=""
-            android:layout_width="wrap_content"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:id="@+id/mresidualkg"
             android:layout_weight="1"
@@ -154,14 +154,14 @@
         android:orientation="horizontal">
         <TextView
             android:text="@string/moseakg"
-            android:layout_width="wrap_content"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:id="@+id/textView22"
             android:layout_weight="1" />
 
         <TextView
             android:text=""
-            android:layout_width="wrap_content"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:id="@+id/moseakg"
             android:layout_weight="1"
@@ -173,14 +173,14 @@
         android:orientation="horizontal">
         <TextView
             android:text="@string/mosea"
-            android:layout_width="wrap_content"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:id="@+id/textView23"
             android:layout_weight="1" />
 
         <TextView
             android:text=""
-            android:layout_width="wrap_content"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:id="@+id/mosea"
             android:layout_weight="1"

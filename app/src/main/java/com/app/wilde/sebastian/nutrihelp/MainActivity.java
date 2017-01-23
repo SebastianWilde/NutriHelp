@@ -89,7 +89,7 @@ public class MainActivity extends AppCompatActivity {
                 dmdb=Double.parseDouble(dm.getText().toString());
                 //
                 sum6plidb=mgrasacarterdb=mresidualdb=mgrasakgdb=mmuscularkgdb=mmusculardb=mresidualkgdb=
-                        moseakgdb=moseadb=0;
+                        moseakgdb=moseadb=0.0;
                 //Operaciones
                 sum6plidb = tricepsdb + subescapulardb + supraespinaldb + abdominaldb + musloFrontaldb + pantorriladb;
                 if (rbHombre.isChecked()==true) {
@@ -102,13 +102,14 @@ public class MainActivity extends AppCompatActivity {
                     mgrasacarterdb=(0.1548*sum6plidb)+3.58;
                     mresidualkgdb=0.209*pesodb;
                 }
-                mresidualdb=(mresidualkgdb*100)/pesodb;
-                mgrasakgdb=(pesodb*mgrasacarterdb)/100;
-                moseakgdb=3.02*Math.pow((Math.pow(talladb/100,2)*(dmdb/100)*(femoraldb/100)*400),0.712);
+                mresidualdb=(mresidualkgdb*100.0)/pesodb;
+                mgrasakgdb=(pesodb*mgrasacarterdb)/100.0;
+                moseakgdb=3.02*Math.pow((Math.pow(talladb/100.0,2)*(dmdb/100.0)*(femoraldb/100.0)*400.0),0.712);
                 mmuscularkgdb = pesodb - (mgrasakgdb + mresidualkgdb + moseakgdb);
-                mmusculardb = (mmuscularkgdb * 100)/pesodb;
-                moseadb = (moseakgdb * 100)/pesodb;
+                mmusculardb = (mmuscularkgdb * 100.0)/pesodb;
+                moseadb = (moseakgdb * 100.0)/pesodb;
                 ///Redondeando resultados a dos decimales
+
                 sum6plidb=Math.round(sum6plidb * 100.0) / 100.0;
                 mgrasacarterdb= Math.round(mgrasacarterdb * 100.0) / 100.0;
                 mresidualdb=Math.round(mresidualdb * 100.0) / 100.0;
