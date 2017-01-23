@@ -41,7 +41,7 @@
                     android:layout_weight="1"
                     android:id="@+id/peso"
                     tools:gravity="center"
-                    android:text="@string/S0"
+                    android:hint="@string/S0"
                     android:gravity="center" />
                 <TextView
                     android:text="@string/talla"
@@ -56,7 +56,7 @@
                     android:ems="5"
                     android:layout_weight="1"
                     android:id="@+id/talla"
-                    android:text="@string/S0"
+                    android:hint="@string/S0"
                     android:gravity="center" />
             </LinearLayout>
             <LinearLayout
@@ -76,7 +76,7 @@
                     android:ems="5"
                     android:layout_weight="1"
                     android:id="@+id/brazoRelajado"
-                    android:text="@string/S0"
+                    android:hint="@string/S0"
                     android:gravity="center" />
                 <TextView
                     android:text="@string/brazofle"
@@ -91,7 +91,7 @@
                     android:ems="5"
                     android:layout_weight="1"
                     android:id="@+id/brazoFlexionado"
-                    android:text="@string/S0"
+                    android:hint="@string/S0"
                     android:gravity="center" />
 
             </LinearLayout>
@@ -112,7 +112,7 @@
                     android:ems="5"
                     android:layout_weight="1"
                     android:id="@+id/cintura"
-                    android:text="@string/S0"
+                    android:hint="@string/S0"
                     android:gravity="center" />
                 <TextView
                     android:text="@string/caderaMax"
@@ -127,7 +127,7 @@
                     android:ems="5"
                     android:layout_weight="1"
                     android:id="@+id/caderaMax"
-                    android:text="@string/S0"
+                    android:hint="@string/S0"
                     android:gravity="center" />
 
             </LinearLayout>
@@ -148,7 +148,7 @@
                     android:ems="5"
                     android:layout_weight="1"
                     android:id="@+id/pantorrillaMax"
-                    android:text="@string/S0"
+                    android:hint="@string/S0"
                     android:gravity="center" />
                 <TextView
                     android:text="@string/triceps"
@@ -163,7 +163,7 @@
                     android:ems="5"
                     android:layout_weight="1"
                     android:id="@+id/triceps"
-                    android:text="@string/S0"
+                    android:hint="@string/S0"
                     android:gravity="center" />
 
             </LinearLayout>
@@ -184,7 +184,7 @@
                     android:ems="5"
                     android:layout_weight="1"
                     android:id="@+id/subescapular"
-                    android:text="@string/S0"
+                    android:hint="@string/S0"
                     android:gravity="center" />
                 <TextView
                     android:text="@string/biceps"
@@ -199,7 +199,7 @@
                     android:ems="5"
                     android:layout_weight="1"
                     android:id="@+id/biceps"
-                    android:text="@string/S0"
+                    android:hint="@string/S0"
                     android:gravity="center" />
 
             </LinearLayout>
@@ -220,7 +220,7 @@
                     android:ems="5"
                     android:layout_weight="1"
                     android:id="@+id/crestalliaca"
-                    android:text="@string/S0"
+                    android:hint="@string/S0"
                     android:gravity="center" />
                 <TextView
                     android:text="@string/supraespinal"
@@ -235,7 +235,7 @@
                     android:ems="5"
                     android:layout_weight="1"
                     android:id="@+id/supraespinal"
-                    android:text="@string/S0"
+                    android:hint="@string/S0"
                     android:gravity="center" />
 
             </LinearLayout>
@@ -256,7 +256,7 @@
                     android:ems="5"
                     android:layout_weight="1"
                     android:id="@+id/abdominal"
-                    android:text="@string/S0"
+                    android:hint="@string/S0"
                     android:gravity="center" />
                 <TextView
                     android:text="@string/muslofron"
@@ -271,7 +271,7 @@
                     android:ems="5"
                     android:layout_weight="1"
                     android:id="@+id/muslofron"
-                    android:text="@string/S0"
+                    android:hint="@string/S0"
                     android:gravity="center" />
 
             </LinearLayout>
@@ -292,7 +292,7 @@
                     android:ems="5"
                     android:layout_weight="1"
                     android:id="@+id/pantorrilla"
-                    android:text="@string/S0"
+                    android:hint="@string/S0"
                     android:gravity="center" />
                 <TextView
                     android:text="@string/humeral"
@@ -307,7 +307,7 @@
                     android:ems="5"
                     android:layout_weight="1"
                     android:id="@+id/humeral"
-                    android:text="@string/S0"
+                    android:hint="@string/S0"
                     android:gravity="center" />
 
             </LinearLayout>
@@ -328,8 +328,9 @@
                     android:ems="5"
                     android:layout_weight="1"
                     android:id="@+id/femoral"
-                    android:text="@string/S0"
+                    android:hint="@string/S0"
                     android:gravity="center" />
+
                 <TextView
                     android:text="@string/dm"
                     android:layout_width="0dp"
@@ -343,7 +344,7 @@
                     android:ems="5"
                     android:layout_weight="1"
                     android:id="@+id/dm"
-                    android:text="@string/S0"
+                    android:hint="@string/S0"
                     android:gravity="center" />
 
             </LinearLayout>
@@ -376,5 +377,10 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/calcular" />
+    <Button
+        android:text="Limpiar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/limpiar" />
 
 </LinearLayout>

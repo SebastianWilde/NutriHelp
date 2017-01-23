@@ -11,6 +11,7 @@ import android.widget.RadioButton;
 import android.widget.TextView;
 
 import static com.app.wilde.sebastian.nutrihelp.R.id.calcular;
+import static com.app.wilde.sebastian.nutrihelp.R.id.limpiar;
 import static com.app.wilde.sebastian.nutrihelp.R.id.mgrasakg;
 
 public class MainActivity extends AppCompatActivity {
@@ -27,7 +28,7 @@ public class MainActivity extends AppCompatActivity {
     double  sum6plidb, mgrasacarterdb,mresidualdb,mgrasakgdb,mmuscularkgdb,mmusculardb,mresidualkgdb,
     moseakgdb,moseadb;
     /////
-    Button btncalcular;
+    Button btncalcular,btnlimpiar;
     RadioButton rbHombre,rbMujer;
 
     //Funciones
@@ -35,6 +36,11 @@ public class MainActivity extends AppCompatActivity {
     public int fun1(EditText a, EditText b, EditText c){
         a.getText().toNumber;
     }*/
+
+    private boolean isEmpty(EditText myeditText) {
+        return myeditText.getText().toString().trim().length() == 0;
+    }
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -58,9 +64,9 @@ public class MainActivity extends AppCompatActivity {
         humeral=(EditText)findViewById(R.id.humeral);
         femoral=(EditText)findViewById(R.id.femoral);
         dm=(EditText)findViewById(R.id.dm);
-
         //boton calcular
         btncalcular=(Button)findViewById(calcular);
+        btnlimpiar=(Button)findViewById(limpiar);
         //radio buttons
         rbHombre=(RadioButton)findViewById(R.id.rbHombre);
         rbMujer=(RadioButton)findViewById(R.id.rbMujer);
@@ -68,25 +74,29 @@ public class MainActivity extends AppCompatActivity {
         btncalcular.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+
+                pesodb = talladb = brazoRelajadodb = brazoFlexionadodb = cinturadb =
+                        caderasdb = pantorrilaMaxdb = tricepsdb = subescapulardb = bicepsdb = crestalliacadb =
+                        supraespinaldb = abdominaldb = musloFrontaldb = pantorriladb = humeraldb = femoraldb = dmdb = 0.0;
                 //Trasformando a double y captura de datos
-                pesodb = Double.parseDouble(peso.getText().toString());
-                talladb=Double.parseDouble(talla.getText().toString());
-                brazoRelajadodb=Double.parseDouble(brazoRelajado.getText().toString());
-                brazoFlexionadodb=Double.parseDouble(brazoFlexionado.getText().toString());
-                cinturadb=Double.parseDouble(cintura.getText().toString());
-                caderasdb=Double.parseDouble( caderas.getText().toString());
-                pantorrilaMaxdb=Double.parseDouble(pantorrilaMax.getText().toString());
-                tricepsdb=Double.parseDouble( triceps.getText().toString());
-                subescapulardb=Double.parseDouble(subescapular.getText().toString());
-                bicepsdb=Double.parseDouble(biceps.getText().toString());
-                crestalliacadb=Double.parseDouble(crestalliaca.getText().toString());
-                supraespinaldb=Double.parseDouble(supraespinal.getText().toString());
-                abdominaldb=Double.parseDouble(abdominal.getText().toString());
-                musloFrontaldb=Double.parseDouble(musloFrontal.getText().toString());
-                pantorriladb=Double.parseDouble(pantorrila.getText().toString());
-                humeraldb=Double.parseDouble(humeral.getText().toString());
-                femoraldb=Double.parseDouble(femoral.getText().toString());
-                dmdb=Double.parseDouble(dm.getText().toString());
+                if (!isEmpty(peso)) pesodb = Double.parseDouble(peso.getText().toString());
+                if (!isEmpty(talla)) talladb=Double.parseDouble(talla.getText().toString());
+                if (!isEmpty(brazoRelajado)) brazoRelajadodb=Double.parseDouble(brazoRelajado.getText().toString());
+                if (!isEmpty(brazoFlexionado)) brazoFlexionadodb=Double.parseDouble(brazoFlexionado.getText().toString());
+                if (!isEmpty(cintura)) cinturadb=Double.parseDouble(cintura.getText().toString());
+                if (!isEmpty(caderas)) caderasdb=Double.parseDouble( caderas.getText().toString());
+                if (!isEmpty(pantorrilaMax)) pantorrilaMaxdb=Double.parseDouble(pantorrilaMax.getText().toString());
+                if (!isEmpty(triceps)) tricepsdb=Double.parseDouble( triceps.getText().toString());
+                if (!isEmpty(subescapular)) subescapulardb=Double.parseDouble(subescapular.getText().toString());
+                if (!isEmpty(biceps)) bicepsdb=Double.parseDouble(biceps.getText().toString());
+                if (!isEmpty(crestalliaca)) crestalliacadb=Double.parseDouble(crestalliaca.getText().toString());
+                if (!isEmpty(supraespinal)) supraespinaldb=Double.parseDouble(supraespinal.getText().toString());
+                if (!isEmpty(abdominal)) abdominaldb=Double.parseDouble(abdominal.getText().toString());
+                if (!isEmpty(musloFrontal)) musloFrontaldb=Double.parseDouble(musloFrontal.getText().toString());
+                if (!isEmpty(pantorrila)) pantorriladb=Double.parseDouble(pantorrila.getText().toString());
+                if (!isEmpty(humeral)) humeraldb=Double.parseDouble(humeral.getText().toString());
+                if (!isEmpty(femoral)) femoraldb=Double.parseDouble(femoral.getText().toString());
+                if (!isEmpty(dm)) dmdb=Double.parseDouble(dm.getText().toString());
                 //
                 sum6plidb=mgrasacarterdb=mresidualdb=mgrasakgdb=mmuscularkgdb=mmusculardb=mresidualkgdb=
                         moseakgdb=moseadb=0.0;
@@ -143,5 +153,30 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+
+        btnlimpiar.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                peso.setText("");
+                talla.setText("");
+                brazoRelajado.setText("");
+                brazoFlexionado.setText("");
+                cintura.setText("");
+                caderas.setText("");
+                pantorrilaMax.setText("");
+                triceps.setText("");
+                subescapular.setText("");
+                biceps.setText("");
+                crestalliaca.setText("");
+                supraespinal.setText("");
+                abdominal.setText("");
+                musloFrontal.setText("");
+                pantorrila.setText("");
+                humeral.setText("");
+                femoral.setText("");
+                dm.setText("");
+            }
+        });
+
     }
 }
